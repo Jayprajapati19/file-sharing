@@ -4,7 +4,7 @@ import React from 'react'
 
 function FilePreview({ file, removeFile }) {
     return (
-        <div className='flex items-center gap-2 justify-between mt-5 border rounded-lg p-3 border-blue-300'>
+        <div className='flex items-center gap-2 justify-between mt-5 border rounded-lg p-3 border-blue-300 '>
             <div className='flex items-center p-2 '>
                 <Image src='/file.png' width={50} height={50} alt='file' />
                 <div className='text-gray-900 text-left'>
@@ -17,4 +17,5 @@ function FilePreview({ file, removeFile }) {
     )
 }
 
+// 1: 41
 export default FilePreview
