@@ -7,9 +7,9 @@ export default function Page() {
 
 
 
-        <section className="bg-gray-900">
+        <section className="bg-gray-600">
             <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-                <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+                <section className="relative flex h-32 items-end bg-gray-600 lg:col-span-5 lg:h-full xl:col-span-6">
                     <img
                         alt=""
                         src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
@@ -55,7 +55,7 @@ export default function Page() {
                                 </svg>
                             </a>
 
-                            <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+                            <h1 className="mt-2 text-2xl font-bold text-gray-600 sm:text-3xl md:text-4xl">
                                 Welcome to File Sharing App 📁
                             </h1>
 
