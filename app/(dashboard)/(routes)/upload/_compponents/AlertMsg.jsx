@@ -3,9 +3,9 @@ import React from 'react'
 
 function AlertMsg({ msg }) {
     return (
-        <div>
-            <AlertCircle />
-            {/* 1:29 */}
+        <div className='p-4 bg-red-500 mt-5 text-white  rounded-lg gap-5 items-center'>
+            <AlertCircle className='text-black animate-bounce' />
+            {msg}
         </div>
     )
 }

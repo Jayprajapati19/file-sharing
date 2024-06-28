@@ -3,13 +3,16 @@ import AlertMsg from './AlertMsg';
 
 function UploadForm() {
     const [file, setFile] = useState();
+    const [errorMsg, setErrorMsg] = useState();
 
     const onFileSelect = (file) => {
         console.log(file);
         if (file && file.size > 2000000) {
             console.log("Size is greter than 2MB");
+            setErrorMsg('max file upload size is 2MB')
             return;
         }
+        setErrorMsg(null)
         setFile(file);
     }
 
@@ -28,15 +31,16 @@ function UploadForm() {
                         <p className="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX SIZE : 2MB)</p>
                     </div>
                     <input id="dropzone-file" type="file" class="hidden"
-                        onChange={(event) => onFileSelect.log(event.target.files[0])}
+                        onChange={(event) => onFileSelect(event.target.files[0])}
 
                     />
                 </label>
             </div>
-            <AlertMsg />
-            <button disabled={!file} className='p-2 bg-primary text-white w-[30%] rounded-full mt-5 disabled:bg-gray-400 '>Upload</button>
 
-        </div>
+            {errorMsg ? < AlertMsg msg={errorMsg} /> : null}
+            <button button disabled={!file} className='p-2 bg-primary text-white w-[30%] rounded-full mt-5 disabled:bg-gray-400 '>Upload</button>
+
+        </div >
     )
 }
 

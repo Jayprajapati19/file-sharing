@@ -32,7 +32,7 @@ function SideNav({ closeSideBar }) {
         <div className='shadow-sm border-r h-full'>
             <div className='p-5 border-b'>
                 <Link href={'/files'}>
-                    <Image src='/logo.svg' width={150}
+                    <Image className='animate-pulse' src='/logo.svg' width={150}
                         height={100} alt='logo' />
                 </Link>
             </div>
