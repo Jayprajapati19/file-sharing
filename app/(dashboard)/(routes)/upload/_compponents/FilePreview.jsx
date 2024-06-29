@@ -17,5 +17,4 @@ function FilePreview({ file, removeFile }) {
     )
 }
 
-// 1: 41
 export default FilePreview
