@@ -3,12 +3,12 @@ import React from 'react'
 function Upgrade() {
     return (
         <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-            <h1 className='text-gray-500'>Currently not working this section</h1>
+
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
                 <div
                     className="rounded-2xl border border-indigo-600 p-6 shadow-sm ring-1 ring-indigo-600 sm:order-last sm:px-8 lg:p-12"
                 >
-                    <div className="text-center">
+                    <div className="text-center text-black">
                         <h2 className="text-lg font-medium text-gray-900">
                             Pro
                             <span className="sr-only">Plan</span>
@@ -122,7 +122,8 @@ function Upgrade() {
                 </div>
 
                 <div className="rounded-2xl border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12">
-                    <div className="text-center">
+                    <div className="text-center text-black">
+                        <h2 className='text-black'>Currently not working </h2>
                         <h2 className="text-lg font-medium text-gray-900">
                             Starter
                             <span className="sr-only">Plan</span>
