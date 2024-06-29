@@ -54,6 +54,7 @@ function Upload() {
             id: docId,
             shortUrl: process.env.NEXT_PUBLIC_BASE_URL + docId
         });
+        setFileDocId(docId)
 
 
     }
@@ -66,14 +67,14 @@ function Upload() {
         }, 2000)
     }, [progress == 100]);
 
-    // useEffect(() => {
-    //     uploadCompleted &&
-    //         setTimeout(() => {
-    //             setUploadCompleted(false);
-    //             console.log("FileDocId", fileDocId)
-    //             router.push('/file-preview/' + fileDocId);
-    //         }, 2000)
-    // }, [uploadCompleted == true])
+    useEffect(() => {
+        uploadCompleted &&
+            setTimeout(() => {
+                setUploadCompleted(false);
+                console.log("FileDocId", fileDocId)
+                router.push('/file-preview/' + fileDocId);
+            }, 2000)
+    }, [uploadCompleted == true])
 
 
 
