@@ -9,7 +9,7 @@ function FilePreview({ params }) {
     }, [])
 
     return (
-        <div>FilePreview</div>
+        <div className='text-gray-900'>FilePreview</div>
     )
 }
 
