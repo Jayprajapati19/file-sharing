@@ -42,17 +42,20 @@ function Upload() {
     const saveInfo = async (file, fileUrl) => {
         const docId = generateRandomString().toString();
         setFileDocId(docId);
-        await setDoc(doc(db, "uploadedFiles", docId), { // Changed to "uploadedFiles/docId"
-            fileName: file?.name,
-            fileSize: file?.size,
-            fileType: file?.type,
-            fileUrl: fileUrl,
-            userEmail: user?.primaryEmailAddress.emailAddress,
-            userName: user?.fullName,
-            password: '',
-            id: docId,
-            shortUrl: process.env.NEXT_PUBLIC_BASE_URL + docId
-        });
+        await setDoc(doc(db, "uploadedFiles", docId),
+            {
+                // Changed to "uploadedFiles/docId"
+                fileName: file?.name,
+                fileSize: file?.size,
+                fileType: file?.type,
+                fileUrl: fileUrl,
+                userEmail: user?.primaryEmailAddress.emailAddress,
+                userName: user?.fullName,
+                password: '',
+                id: docId,
+                shortUrl: process.env.NEXT_PUBLIC_BASE_URL + docId
+            }
+        )
     };
 
     useEffect(() => {
