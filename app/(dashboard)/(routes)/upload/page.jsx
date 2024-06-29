@@ -42,7 +42,7 @@ function Upload() {
     const saveInfo = async (file, fileUrl) => {
         const docId = generateRandomString().toString();
         setFileDocId(docId);
-        await setDoc(doc(db, "uploadedFiles", docId),
+        await setDoc(doc(db, "uploadedFile", docId),
             {
                 // Changed to "uploadedFiles/docId"
                 fileName: file?.name,
@@ -80,7 +80,7 @@ function Upload() {
         <div className='p-5 px-8 md:px-28 text-center'>
             {!uploadCompleted ? (
                 <div>
-                    <h2 className='text-[20px] text-center m-5 text-gray-700'> Start
+                    <h2 className='text-[20px] text-center m-5 text-gray-800'> Start
                         <strong className='text-primary'>  Uploading </strong>
                         File and <strong className='text-primary'> Share</strong> it </h2>
                     <UploadForm
