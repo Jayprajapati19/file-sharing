@@ -37,7 +37,7 @@ export const EmailTemplate = ({
                                     }}
                                 >
 
-                                    Hi {responce?.emailToSend?.split("@")[0]},
+                                    Hii.. {responce?.emailToSend?.split("@")[0]},
                                 </Heading>
                                 <Heading
                                     as="h2"

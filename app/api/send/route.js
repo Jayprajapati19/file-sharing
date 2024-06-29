@@ -11,7 +11,8 @@ export async function POST(req) {
             from: 'Filesharing@resend.dev',
             // from: 'Acme <Filesharing@resend.dev>',
             // to: [responce.emailToSend],
-            to: ['jayp37679@gmail.com'],
+            // to: ['jayp37679@gmail.com'],
+            to: [responce.emailToSend],
             subject: responce?.userName + " share file with You",
             react: EmailTemplate({ responce }),
         });
